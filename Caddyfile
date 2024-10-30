@@ -1,0 +1,11 @@
+# caddy file
+:80 {
+	# handle_path /api/* {
+		reverse_proxy /api/* 127.0.0.1:8000
+        reverse_proxy /static/* 127.0.0.1:8000
+        reverse_proxy /media/* 127.0.0.1:8000
+	# }
+	# handle {
+		reverse_proxy /* localhost:3000
+	# }
+}
