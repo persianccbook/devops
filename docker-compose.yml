@@ -21,6 +21,8 @@ services:
     image: ghcr.io/persianccbook/backend:latest
     env_file:
       - ".env"
+    volumes:
+      - "./app:/app"
     depends_on:
       postgres:
         condition: service_healthy
